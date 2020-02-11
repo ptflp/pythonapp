@@ -7,8 +7,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y install \
 
 WORKDIR /app
 
-COPY entrypoint.sh /
+COPY ./entrypoint.sh /
 
 ENTRYPOINT /entrypoint.sh
 
-CMD ["sh", "-c", "python", "tlgrm.py"]
+CMD ["sh", "-c", "python", "$APP_NAME"]
