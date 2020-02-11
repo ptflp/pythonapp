@@ -7,7 +7,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y install \
 
 WORKDIR /app
 
-COPY ./entrypoint.sh /
+COPY ./stretch/entrypoint.sh /
 
 ENTRYPOINT /entrypoint.sh
 
